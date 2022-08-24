@@ -36,8 +36,6 @@ jobs:
         run: composer run-script test
 
       - name: Deploy on staging
-        # uses: bambamboole/gha-upmerge@de87b212278009f9ace0ba024701890b9eb3281b
-        run: git config --global --add safe.directory /github/workspace
         uses: bambamboole/gha-upmerge@v1.0.1
         with:
           from_branch: main
