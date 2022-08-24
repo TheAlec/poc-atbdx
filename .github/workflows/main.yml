@@ -38,7 +38,7 @@ jobs:
         with:
           stable_branch: 'main'
           development_branch: 'staging'
-          allow_ff: false
+          allow_ff: true
           allow_forks: true
           user_name: Auto merge from Main
         env:
