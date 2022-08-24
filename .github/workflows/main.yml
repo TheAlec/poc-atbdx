@@ -35,4 +35,12 @@ jobs:
       - name: Run test suite
         run: composer run-script test
 
-
+      - name: Deploy on staging
+        # uses: bambamboole/gha-upmerge@de87b212278009f9ace0ba024701890b9eb3281b
+        uses: bambamboole/gha-upmerge@v1.0.1
+        with:
+          from_branch: main
+          to_branch: staging
+          user_name: TheAlec
+          user_email: alexandre.roy@manomano.com
+          push_token: "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"
