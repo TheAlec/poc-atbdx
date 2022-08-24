@@ -36,8 +36,8 @@ jobs:
       - name: Merge on Staging
         uses: robotology/gh-action-nightly-merge@v1.3.3
         with:
-          stable_branch: 'staging'
-          development_branch: 'main'
+          stable_branch: 'main'
+          development_branch: 'staging'
           allow_ff: false
           allow_forks: true
           user_name: Auto merge from Main
