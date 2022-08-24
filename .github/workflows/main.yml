@@ -47,4 +47,4 @@ jobs:
           to_branch: staging
           user_name: AutomaticMergeFromMain
           user_email: main@atbdx2022.io
-          push_token: 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
+          push_token: GITHUB_TOKEN = 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
