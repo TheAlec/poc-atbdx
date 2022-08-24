@@ -1,4 +1,4 @@
-name: DevEnv
+name: development pipeline
 
 on:
   push:
@@ -32,29 +32,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-      # Docs: https://getcomposer.org/doc/articles/scripts.md
-  test:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
       - name: Run test suite
         run: composer run-script test
 
-  deploy:
 
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Deploy on staging
-        # uses: bambamboole/gha-upmerge@de87b212278009f9ace0ba024701890b9eb3281b
-        uses: bambamboole/gha-upmerge@v1.0.1
-        with:
-          from_branch: main
-          to_branch: staging
-          user_name: AutomaticMergeFromMain
-          user_email: main@atbdx2022.io
-          push_token: "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"
