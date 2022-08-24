@@ -39,5 +39,7 @@ jobs:
           stable_branch: 'staging'
           development_branch: 'main'
           allow_ff: false
+          allow_forks: true
+          user_name: Auto merge from Main
         env:
           GITHUB_TOKEN: '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'
