@@ -33,12 +33,18 @@ jobs:
       - name: Run test suite
         run: composer run-script test
 
-      - name: Deploy on staging
-        uses: bambamboole/gha-upmerge@v1.0.1
+  nightly-merge:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Merge on Staging
+        uses: robotology/gh-action-nightly-merge@v1.3.3
         with:
-          from_branch: main
-          to_branch: staging
-          user_name: TheAlec
-          user_email: alexandre.roy@manomano.com
+          stable_branch: 'staging'
+          development_branch: 'main'
+          allow_ff: false
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: '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'
