@@ -41,7 +41,7 @@ jobs:
         with:
           from_branch: main
           to_branch: staging
-          user_name: TheAutomatedAlec
-          user_email: alexandre.roy@atbdx2022.com
+          user_name: TheAlec
+          user_email: alexandre.roy@manomano.com
         env:
           GITHUB_TOKEN: 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
