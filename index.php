@@ -1,7 +1,5 @@
 <?php
-    $config = file_get_contents("./config.json");
-    var_dump(json_decode($config));
-
+    $config = json_decode(file_get_contents("./config.json"));
 ?>
 <!DOCTYPE html>
 <html lang="en">
