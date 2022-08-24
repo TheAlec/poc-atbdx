@@ -1,7 +1,6 @@
 {
   "name": "vendor-name/poc-atbdx-2022",
   "description": "Our POC before we start",
-  "version": "1.0.0",
   "license": "MIT",
   "require-dev": {
     "phpunit/phpunit": "^9.5"
