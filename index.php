@@ -8,6 +8,6 @@
     <title>Hello world !</title>
 </head>
 <body>
-<h1>Hello world in <?= $config->env ?>!</h1>
+<h1>Hello world in <?= $config->env ?> !</h1>
 </body>
 </html>
