@@ -35,6 +35,9 @@ jobs:
       - name: Run test suite
         run: composer run-script test
 
+      - name: dubious ownership handle
+        run: git config --global --add safe.directory /github/workspace
+
       - name: Deploy on staging
         # uses: bambamboole/gha-upmerge@de87b212278009f9ace0ba024701890b9eb3281b
         uses: bambamboole/gha-upmerge@v1.0.1
