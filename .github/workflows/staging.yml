@@ -1,4 +1,4 @@
-name: Merging
+name: Merging stage to prod
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
           development_branch: 'production'
           allow_ff: true
           allow_forks: true
-          user_name: Auto merge from Main
+          user_name: Auto merge from Staging to Prod
         env:
           GITHUB_TOKEN: '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'
