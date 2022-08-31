@@ -1,8 +1,8 @@
-name: Merging main to stage
+name: Merging stage to prod
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "staging" ]
 
 jobs:
   build:
@@ -15,8 +15,10 @@ jobs:
       - name: Merge on Staging
         uses: robotology/gh-action-nightly-merge@v1.3.3
         with:
-          stable_branch: 'main'
-          development_branch: 'staging'
-          user_name: Auto merge from Main
+          stable_branch: 'staging'
+          development_branch: 'production'
+          allow_ff: true
+          allow_forks: true
+          user_name: Auto merge from Staging to Prod
         env:
           GITHUB_TOKEN: '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'
