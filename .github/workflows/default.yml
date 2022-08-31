@@ -1,8 +1,8 @@
-name: development pipeline
+name: Quality flow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "staging", "production" ]
 
 permissions:
   contents: read
@@ -32,14 +32,3 @@ jobs:
 
       - name: Run test suite
         run: composer run-script unit-test
-
-      - name: Merge on Staging
-        uses: robotology/gh-action-nightly-merge@v1.3.3
-        with:
-          stable_branch: 'main'
-          development_branch: 'staging'
-          allow_ff: true
-          allow_forks: true
-          user_name: Auto merge from Main
-        env:
-          GITHUB_TOKEN: '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'
