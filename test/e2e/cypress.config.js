@@ -13,8 +13,11 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   e2e: {
+    baseUrl: "http://localhost:3000",
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,
+    screenshotsFolder: "test/e2e/cypress/screenshots",
+    videosFolder: "test/e2e/cypress/videos"
   },
 });

@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.1.0",
+    "@cypress/browserify-preprocessor": "latest"
+  },
+  "scripts": {
+    "cy:open": "cypress open --config-file test/e2e/cypress.config.js --env host=develop",
+    "cy:runLoc": "cypress run --config-file test/e2e/cypress.config.js --env host=develop",
+    "cy:runProd": "cypress run --config baseUrl=https://poc-atbdx-production.herokuapp.com --config-file test/e2e/cypress.config.js --env host=production"
+  }
+}

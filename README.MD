@@ -12,6 +12,9 @@ Il vous fait un environnement de développement. Si vous voulez suivre notre tut
 - Installer un IDE ([PhpStorm](https://www.jetbrains.com/phpstorm/download/), [VisualStudio](https://code.visualstudio.com/))
 - Installer [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
 - Installer [PHP](https://www.php.net/manual/en/install.php)
+    - Installer en local un server PHP (MAMP, XAMP, etc...) 
+    - ou pour les utilisateurs VisualStudio Code
+        - Installer l'extension "PHP Server" (Assuré vous d'avoir PHP d'installé)
 - Installer [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 - Installer [Composer](https://getcomposer.org/download/)
 - Installer [NPM](https://nodejs.org/en/download/current/)
