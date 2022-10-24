@@ -1,4 +1,5 @@
 <?php
+require 'functions.php';
 $config = json_decode(file_get_contents("./config.json"));
 ?>
 <!DOCTYPE html>
@@ -10,8 +11,7 @@ $config = json_decode(file_get_contents("./config.json"));
 </head>
 
 <body>
-    <h1>Hello world in <?= $config->env ?> !</h1>
-
+    <h1><?= $config->env ?> !</h1>
 </body>
 
 </html>

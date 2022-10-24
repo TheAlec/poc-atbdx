@@ -1,6 +1,41 @@
 # Agile Tour Bordeaux 2022
 ## De l'idée à la production, bien faire les choses ne coûte pas plus cher.
 
+## Setup minimaliste
+
+### Vérification et installation prérequis
+
+ Note pour les  users, `Brew install` est ton ami ;)
+
+- Vérifier PHP est installé `php --version`
+    - Installer [PHP](https://www.php.net/manual/en/install.php) puis
+        - Installer en local un server PHP (MAMP, XAMP, etc...) 
+        - ou pour les utilisateurs VisualStudio Code : Installer l'extension "PHP Server" (Assuré vous d'avoir PHP d'installé)
+- Vérifier Composer est installé : `composer -V`
+    - Installer [Composer](https://getcomposer.org/download/)
+- Vérifier NPM est installé `npm -version`
+    - Installer [NPM](https://nodejs.org/en/download/current/)
+
+### Récupération des sources et démarrage
+`git clone` sinon récupérer les sources depuis le github
+
+Depuis la racine du projet,
+
+On va commencer par installer les dépendances
+```
+composer install
+```
+
+```
+npm install
+```
+
+Pour vérifier que tout s'est bien passé, lancez successivement :
+
+- ```composer run-script unit-test```
+- ```npm cy:runLoc```
+
+## From Scratch avec Heroku
 
 ### 1. Création / connexion aux services externes
 - Se connecter à son compte [GitHub](https://github.com/)
