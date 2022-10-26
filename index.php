@@ -1,5 +1,4 @@
 <?php
-require 'functions.php';
 $config = json_decode(file_get_contents("./config.json"));
 ?>
 <!DOCTYPE html>
@@ -21,19 +20,17 @@ $config = json_decode(file_get_contents("./config.json"));
             </tr>
             <tr>
                 <td>Post-It</td>
-                <td>12.4<input type="hidden" name="prix[]" value="12.4"></td>
-                <td><input type="number" min="0" name="quantity[]"></td>
+                <td>12.4<input type="hidden" name="price[1]" value="12.4"></td>
+                <td><input type="number" min="0" name="quantity[1]"></td>
             </tr>
             <tr>
                 <td>Neulands</td>
-                <td>20<input type="hidden" name="prix[]" value="20"></td>
-                <td><input type="number" min="0" name="quantity[]"></td>
+                <td>20<input type="hidden" name="price[2]" value="20"></td>
+                <td><input type="number" min="0" name="quantity[2]"></td>
             </tr>
         </table>
         <input type="submit">
     </form>
-
-    <?= multiplication(12.4, -2) ?>
 
 </body>
 

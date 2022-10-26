@@ -23,6 +23,6 @@ Feature: Passer une commande
         When Il renseigne la valeur 2 dans le champ quantité du produit Post-It qui coûte 12.4€ l'unité
         And Il renseigne la valeur 2 dans le champ quantité du produit Neuland qui coûte 20€ l'unité
         And Il valide sa saisie
-        Then Il doit voir sommes total du panier qui est égale à 68.8 €
+        Then Il doit voir sommes total du panier qui est égale à 64.8 €
 
     Scenario: Calculer la TVA
