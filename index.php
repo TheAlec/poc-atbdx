@@ -19,12 +19,12 @@ $config = json_decode(file_get_contents("./config.json"));
                 <th>Quantité</th>
             </tr>
             <tr>
-                <td>Post-It</td>
+                <td>Post-It<input type="hidden" name="name[1]" value="Post-It"></td>
                 <td>12.4<input type="hidden" name="price[1]" value="12.4"></td>
                 <td><input type="number" min="0" name="quantity[1]"></td>
             </tr>
             <tr>
-                <td>Neulands</td>
+                <td>Neulands<input type="hidden" name="name[2]" value="Neulands"></td>
                 <td>20<input type="hidden" name="price[2]" value="20"></td>
                 <td><input type="number" min="0" name="quantity[2]"></td>
             </tr>
