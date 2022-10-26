@@ -40,7 +40,7 @@ Then("il doit voir un message d'erreur", () => {
 });
 
 /* ------------------------------------------------------------ */
-/* SCENARIO : Les champs de saisie quantité n'acceptent pas de nombres négatif */
+/* SCENARIO : Calculer la total pour un produit */
 
 When("il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 12.4€ l'unité", () => {
     cy.contains("Post-It").parent().within(() => {
@@ -52,13 +52,19 @@ And("il valide sa saisie", () => {
     cy.get('[type="submit"]').click();
 });
 
-Then("il doit voir la valeur {float} dans la page de résultat", (value) => {
-    cy.get("#result").should('to.contain', value);
+Then("il doit voir la valeur totale {float} sur la ligne du produit", (valeurTotaleProduit) => {
+    cy.contains("Post-It").parent().within(() => {
+        cy.get('td.TotalDuProduit').should('have.text', valeurTotaleProduit);
+        // ou
+        cy.get('td.TotalDuProduit').invoke('text')
+            .then(parseFloat)
+            .should('equal', valeurTotaleProduit);
+    });
 });
 
 
 /* ------------------------------------------------------------ */
-/* SCENARIO : Les champs de saisie quantité n'acceptent pas de nombres négatif */
+/* SCENARIO : Calculer la saisie total du panier */
 
 When("il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 12.4 € l'unité", () => {
     cy.contains("Post-It").parent().within(() => {
@@ -71,3 +77,10 @@ When("il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 2
         cy.get('input[type=number]').type("2");
     });
 });
+
+Then("il doit voir la valeur totale {float} dans la page de résultat", (valeurTotale) => {
+    cy.get('#result').invoke('text').then(parseFloat).should('equal', valeurTotale);
+});
+
+/* ------------------------------------------------------------ */
+/* SCENARIO : Appliquer la TVA Française */

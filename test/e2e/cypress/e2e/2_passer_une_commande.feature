@@ -17,10 +17,16 @@ Feature: Saisie d'une quantité par produits avec contrôle simple
     Scenario: Calculer la total pour un produit
         When il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 12.4 € l'unité
         And il valide sa saisie
-        Then il doit voir la valeur 24.8 dans la page de résultat
+        Then il doit voir la valeur totale 24.8 sur la ligne du produit
 
     Scenario: Calculer la saisie total du panier
         When il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 12.4 € l'unité
         And il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 20 € l'unité
         And il valide sa saisie
-        Then il doit voir la valeur 64.8 dans la page de résultat
+        Then il doit voir la valeur totale 64.8 dans la page de résultat
+
+    Scenario: Appliquer la TVA Française
+        Given Le client est sur la page résultat
+        And il a un montant total de 64.8
+        Then Il doit avoir un montant de taxe TVA de 12.96
+        And Il doit avoir un montant TTC de 77.76
