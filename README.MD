@@ -30,10 +30,12 @@ composer install
 npm install
 ```
 
-Pour vérifier que tout s'est bien passé, lancez successivement :
+Lancer votre serveur PHP et vous devriez voir : "develop !"
+
+Dernière étape, vérifier que tout s'est bien passé, lancez successivement :
 
 - ```composer run-script unit-test```
-- ```npm cy:runLoc```
+- ```npm run cy:open```
 
 ## From Scratch avec Heroku
 
