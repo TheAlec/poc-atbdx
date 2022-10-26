@@ -1,28 +1,26 @@
-Feature: Passer une commande
+Feature: Saisie d'une quantité par produits avec contrôle simple
 
     Background: Accéder à la page de commande
-        Given Un client est sur la page de commande
+        Given un client est sur la page de commande
 
-    Scenario: Champs de saisie quantité par produit
-        Given une liste de produit
+    Scenario: Un champ de saisie de quantité par produit
+        Given une liste de produits
             | produit  | prix |
             | Post-It  | 12.4 |
             | Neulands | 20   |
-        Then Il doit voir un champ de saisie pour chaque produit
+        Then il doit voir un champ de saisie pour chaque produit
 
-    Scenario: Champs de saisie quantité n'accepte pas de nombre négatif
-        When Il saisie un nombre négatif dans n'importe quel champ de saisie de quantité
-        Then Il doit voir un message d'erreur
+    Scenario: Les champs de saisie quantité n'acceptent pas de nombres négatif
+        When il saisie un nombre négatif dans n'importe quel champ de saisie de quantité
+        Then il doit voir un message d'erreur
 
     Scenario: Calculer la total pour un produit
-        When Il renseigne la valeur 2 dans le champ quantité du produit Post-It qui coûte 12.4€ l'unité
-        And Il valide sa saisie
-        Then Il doit voir la valeur 24.8 dans la page de résultat
+        When il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 12.4 € l'unité
+        And il valide sa saisie
+        Then il doit voir la valeur 24.8 dans la page de résultat
 
     Scenario: Calculer la saisie total du panier
-        When Il renseigne la valeur 2 dans le champ quantité du produit Post-It qui coûte 12.4€ l'unité
-        And Il renseigne la valeur 2 dans le champ quantité du produit Neuland qui coûte 20€ l'unité
-        And Il valide sa saisie
-        Then Il doit voir sommes total du panier qui est égale à 64.8 €
-
-    Scenario: Calculer la TVA
+        When il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 12.4 € l'unité
+        And il renseigne la valeur 2 dans le champ quantité d'un produit qui coûte 20 € l'unité
+        And il valide sa saisie
+        Then il doit voir la valeur 64.8 dans la page de résultat
